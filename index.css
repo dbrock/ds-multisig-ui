@@ -12,8 +12,7 @@ tr > :nth-child(1) { text-align: right; }
 tr > :nth-child(2) { text-align: center; }
 tr > :nth-child(3) { text-align: right; }
 
-.expired, .triggered { opacity: .3; }
-.triggered { font-weight: bold; }
+.expired { opacity: .33; }
 
 .small-caps { font-variant: small-caps; text-transform: lowercase; }
 .small-caps { letter-spacing: .05em; }
