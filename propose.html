@@ -1,0 +1,86 @@
+<!doctype html>
+<meta charset=utf-8>
+<link rel=stylesheet href=index.css>
+<h1 style="font-weight: bold">Multisig action proposal</h1>
+<div id=app></div>
+<div class="note pane">
+  <h2><label><input name=type type=radio checked> Token transfer</label></h2>
+  <p>Propose a transfer of ETH or any ERC20-compatible token.</p>
+  <div style="overflow: hidden">
+    <label class=token>
+      <div><img src=token-eth.png></div>
+      <input name=token type=radio checked> ETH
+    </label>
+    <label class=token>
+      <div style="filter: sepia(100%)"><img src=token-eth.png></div>
+      <input name=token type=radio> WETH
+    </label>
+    <label class=token>
+      <img src=token-mkr.svg>
+      <div><input name=token type=radio> MKR</div>
+    </label>
+    <label class=token>
+      <img src=token-other.svg>
+      <div><input name=token type=radio> Other</div>
+    </label>
+  </div>
+  <div class=field style="opacity: .5">
+    <div><strong>Token address</strong></div>
+    <label>
+      <input type=text value="(not applicable for native ETH transfers)" disabled>
+    </label>
+  </div>
+  <div class=field>
+    <div><strong>Amount</strong> (in wei or other smallest unit)</div>
+    <label>
+      <code><input type=text maxlength=42></code>
+    </label>
+  </div>
+  <div class=field>
+    <div><strong>Recipient address</strong></div>
+    <label>
+      <code><input type=text maxlength=42></code>
+    </label>
+  </div>
+  <div class=field style="margin-top: 1rem">
+    <label><input name=source type=checkbox>
+      <strong>Transfer from another account</strong> (instead of the multisig itself)</label>
+  </div>
+  <div class=field style="opacity: .5">
+    <div><strong>Source account</strong></div>
+    <label>
+      <code><input type=text maxlength=42></code>
+    </label>
+  </div>
+</div>
+<div class="note pane">
+  <h2><label><input name=type type=radio> Custom action</label></h2>
+  <div class=field>
+    <div><strong>Target address</strong></div>
+    <label>
+      <code><input type=text maxlength=42></code>
+    </label>
+  </div>
+  <div class=field>
+    <div><strong>Function signature</strong> (e.g, &ldquo;<code>foo(address,uint256)</code>&rdquo;)</div>
+    <label>
+      <code><input type=text maxlength=42></code>
+    </label>
+  </div>
+  <div class=field>
+    <div><strong>Arguments</strong> (one per line)</div>
+    <label>
+      <code><textarea rows=6></textarea></code>
+    </label>
+  </div>
+  <div class=field>
+    <div><strong>Value to pass along</strong> (in wei)</div>
+    <label>
+      <code><input type=text value=0></code>
+    </label>
+  </div>
+</div>
+<div style="text-align: right; margin-bottom: 2rem">
+  <input type=submit value="Propose multisig action">
+</div>
+<script src=propose.js></script>
