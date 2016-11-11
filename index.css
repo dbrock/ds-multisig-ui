@@ -34,11 +34,12 @@ td[data-actionable="true"] { color: blue; }
 
 input, textarea { outline: none; font: inherit; }
 input[type=text], textarea { border: 1px solid #999; width: 100%; }
-input[type=text], textarea { padding: .25rem .5rem; }
+input[type=text] { padding: .25rem .5rem; }
+textarea { padding: .5rem; }
 input[type=submit] { padding: .25rem .5rem; }
                   
-.pane { background: white; border-radius: .25rem; }
-.pane { margin-bottom: 2rem; }
+.pane { background: white; border-radius: .5rem; }
+.pane { margin-bottom: 2rem; padding-bottom: 1.25rem; }
 
 .field { margin: .75rem 0; }
 .field { font-size: .8rem; }
