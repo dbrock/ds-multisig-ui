@@ -43,3 +43,5 @@ input[type=submit] { padding: .25rem .5rem; }
 
 .field { margin: .75rem 0; }
 .field { font-size: .8rem; }
+
+#details { display: none; }
